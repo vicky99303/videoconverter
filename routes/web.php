@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\VideoFiles;
+use App\Models\VideoFileModel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data['list'] = VideoFileModel::get();
+    return view('welcome')->with($data);
 });
 
 

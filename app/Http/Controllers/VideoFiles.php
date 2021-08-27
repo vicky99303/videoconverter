@@ -9,13 +9,14 @@ class VideoFiles extends Controller
 {
     public function createForm()
     {
+
         return view('fileupload');
     }
 
     public function fileUpload(Request $req)
     {
         $req->validate([
-            'file' => 'required|mimes:csv,txt,xlx,xls,pdf|max:2048'
+            'file' => 'required|mimes:mp4'
         ]);
 
         $fileModel = new VideoFileModel;
