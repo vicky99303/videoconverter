@@ -45,7 +45,7 @@
                                 <h4 class="my-0 fw-normal">{{$single->name}}</h4>
                             </div>
                             <div class="card-body">
-                                <video src="{{$single->file_path}}"></video>
+                                <video height="500px" controls src="{{$single->file_path}}"></video>
                             </div>
                         </div>
                     </div>
